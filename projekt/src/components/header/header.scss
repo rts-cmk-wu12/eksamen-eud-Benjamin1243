@@ -1,0 +1,50 @@
+@use "../../variables.scss";
+.header{
+    &__list{
+        border-bottom: 1px solid black;
+        align-items:  center;
+        
+        height: 6.5rem /* 104 / 16 = 6.5 */;
+        display: flex;
+        gap: 0.5rem;
+        padding: 0 2rem /* 32 / 16 = 2 */;
+    }
+    &__listItem{
+         color: variables.$textBlack;
+        list-style: none;
+        &:nth-child(2){
+            margin-left: auto;
+        }
+         &--buttonLook{
+            margin-left: 1.5rem /* 24 / 16 = 1.5 */;
+            background-color: variables.$buttonBackgroundColor;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid variables.$darkgreyBorder;
+        }
+        &--buttonLookBlack{
+          
+            background-color: variables.$buttonBackgroundBlack;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            color: variables.$whiteText;
+            border: 1px solid variables.$darkgreyBorder;
+
+        }
+    }
+    &__link{
+        font-family: variables.$inter;
+       
+        font-weight: variables.$lightWeight;
+        text-decoration: none;
+        font-size: variables.$mediumText18;
+        &--active{
+            padding: 0.5rem;
+            border-radius: 0.5rem /* 8 / 16 = 0.5 */;
+            background-color: variables.$whiteText;
+        }
+        
+
+       
+    }
+}

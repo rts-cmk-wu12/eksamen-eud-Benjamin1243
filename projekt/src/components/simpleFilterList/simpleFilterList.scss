@@ -1,0 +1,15 @@
+@use "../../variables.scss";
+.simpleFilter{
+    display: flex;
+    gap: 1rem;
+   
+    &__listItem{
+        list-style: none;
+    }
+    &__button{
+        padding: 0.5rem;
+        border: 0px solid transparent;
+        border-radius: 0.5rem;
+        color: variables.$darkGreyText;
+    }
+}

@@ -1,0 +1,8 @@
+@use "../../variables.scss";
+.searchComponent{
+width: 20.4375rem /* 327 / 16 = 20.4375 */;
+height: 2.5rem /* 40 / 16 = 2.5 */;
+border-radius: 9999;
+border: 1px solid variables.$inputBorderGrey;
+padding: 0 1rem;
+}

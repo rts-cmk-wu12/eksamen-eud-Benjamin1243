@@ -1,0 +1,7 @@
+.listingItems{
+    padding-top: 4rem /* 64 / 16 = 4 */;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem /* 24 / 16 = 1.5 */;
+}
