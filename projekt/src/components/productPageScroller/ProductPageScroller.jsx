@@ -17,7 +17,7 @@ export default function ProductPageScroller({ max, setState, values }) {
         pagesArray[i] = i
     }
 
-
+//////// ting til imorgen husk at ændre * 6 til gange max i stedet så den bliver dynamisk
     function pageScrollHander(caseword, page) {
         //da jeg havde problemmer med state opdatering gemte jeg det i en funktion scoped variabel isetdet
         let count = counter
