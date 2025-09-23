@@ -15,7 +15,7 @@ export default function Header(){
         <li className="header__listItem"><Link href={"/"} className={ pathname == "/" ?  "header__link--active header__link": "header__link"  }>Listings</Link></li>
         <li className="header__listItem"><Link href={"/"} className="header__link">Community</Link></li>
         <li className="header__listItem"><Link href={"/"} className="header__link">Contact</Link></li>
-        <li className="header__listItem header__listItem--buttonLook"><Link href={"/"} className="header__link">Sign in</Link></li>
+        <li className="header__listItem header__listItem--buttonLook"><Link href={"/login"} className="header__link">Sign in</Link></li>
         <li className="header__listItem header__listItem--buttonLookBlack"><Link href={"/"} className="header__link">Register</Link></li>
 
 

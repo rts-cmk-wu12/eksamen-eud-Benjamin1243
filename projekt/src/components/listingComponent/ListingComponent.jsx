@@ -6,9 +6,11 @@ import ListingItem from "../listingItem/ListingItem"
 import ProductPageScroller from "../productPageScroller/ProductPageScroller"
 
 
-export default function ListingComponent(){
-const items = useFetch("http://localhost:4000/api/v1/listings")
+export default function ListingComponent({items}){
+    console.log("items", items)
+
 const [actualProducts, setActualProducts] = useState(null) 
+console.log("actual",actualProducts)
    
     
     return(

@@ -3,9 +3,9 @@ import "./searchComponent.scss"
 
 import { useState } from "react"
 
-export default function SearchComponent(){
+export default function SearchComponent({setState}){
     const [value, setValue] = useState(null)
     return <input placeholder="Search" className="searchComponent" type="text" onInput={(e)=>{
-        setValue(e.target.value)
+       setState(e.target.value)
     }} />
 }

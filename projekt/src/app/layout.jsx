@@ -1,5 +1,6 @@
 import Header from "@/components/header/Header";
 import "./globals.scss"
+import FooterComponent from "@/components/footerComponent/FooterComponent";
 
 
 export default function RootLayout({ children }) {
@@ -11,7 +12,7 @@ export default function RootLayout({ children }) {
         <main>
         {children}
         </main>
-        <footer></footer>
+        <FooterComponent></FooterComponent>
       </div>
       </body>
     </html>

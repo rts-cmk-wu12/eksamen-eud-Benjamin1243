@@ -1,0 +1,27 @@
+@use "../../variables.scss";
+.inputComponent{
+   
+    font-family: variables.$inter;
+    font-weight: variables.$lightWeight;
+
+    &__input{
+        margin-top: 0.5rem;
+    height: 2.5rem /* 40 / 16 = 2.5 */;
+    padding-left: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid variables.$inputBorderGrey ;
+    border-radius: 0.5rem;
+    &::placeholder{
+        color: variables.$inputPlaceholder;
+        font-weight: 200;
+        font-size: 1rem;
+    }
+    }
+
+    &__error{
+        margin-top: 1rem;
+        color: red;
+    }
+    
+}

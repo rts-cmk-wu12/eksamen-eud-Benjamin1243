@@ -7,6 +7,7 @@ import "./productPageScroller.scss"
 export default function ProductPageScroller({ max, setState, values }) {
 
     const [counter, setCounter] = useState(1)
+  
     const [actualProducts, setActualProducts] = useState()
     //pages arary bruges til at mappe talene ud senere
     const pagesArray = []
@@ -17,19 +18,16 @@ export default function ProductPageScroller({ max, setState, values }) {
         pagesArray[i] = i
     }
 
-//////// ting til imorgen husk at ændre * 6 til gange max i stedet så den bliver dynamisk
     function pageScrollHander(caseword, page) {
         //da jeg havde problemmer med state opdatering gemte jeg det i en funktion scoped variabel isetdet
         let count = counter
         switch (caseword) {
 
             case "next": {
-
                 count++
                 if (count > pages) {
                     count = pages
                 }
-
                 break;
             }
             case "back": {
@@ -38,10 +36,6 @@ export default function ProductPageScroller({ max, setState, values }) {
                 if (count - 1 <= 0) {
                     count = 1
                 }
-
-
-
-
                 break;
 
             }
@@ -50,7 +44,7 @@ export default function ProductPageScroller({ max, setState, values }) {
             }
 
         }
-        setState(values?.filter((value) => value.id > (count - 1) * 6 && value.id <= (count) * 6))
+        setState(values?.filter((value,index) => index +1  > (count - 1) * max && index +1 <= (count) * max))
         setCounter(count)
 
 
@@ -61,7 +55,11 @@ export default function ProductPageScroller({ max, setState, values }) {
 
     //sæt første 6 values ind i state
     useEffect(() => {
-        setState(values?.filter((value) => value.id <= 6))
+        
+        console.log()
+        setState(values?.filter((value, index) => index +1 <= max))
+        setCounter(1)
+
 
 
     }, [values])
@@ -76,7 +74,7 @@ export default function ProductPageScroller({ max, setState, values }) {
             </button>
             {pagesArray.map((page) => {
                 return (
-                    <button onClick={() => { pageScrollHander("custom", page) }} className={counter == page ? "productPageScroller__button productPageScroller__button--active" : "productPageScroller__button"}>
+                    <button key={page} onClick={() => { pageScrollHander("custom", page) }} className={counter == page ? "productPageScroller__button productPageScroller__button--active" : "productPageScroller__button"}>
                         {page}
 
 

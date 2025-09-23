@@ -1,0 +1,42 @@
+@use "../../variables.scss";
+.footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-right: 4rem;
+    margin-top: 2rem;
+    border-top: 1px solid variables.$inputBorderGrey;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    &__listItem{
+        list-style: none;
+         margin-bottom: 0.75rem /* 12 / 16 = 0.75 */;
+
+    }
+    &__listHeading{
+        font-family: variables.$inter;
+        font-size: 1rem;
+        color: variables.$listHeadingColor;
+        margin-bottom: 1.75rem /* 28 / 16 = 1.75 */;
+    }
+    &__link{
+         font-family: variables.$inter;
+        font-size: 1rem;
+      
+        font-weight: 400;
+        color: variables.$listHeadingColor;
+        text-decoration: none;
+    }
+    &__socialIcon{
+        font-size: 1.5rem /* 24 / 16 = 1.5 */;
+    }
+    &__icon{
+       
+    }
+    &__iconFlex{
+         margin-top: 1.5rem /* 24 / 16 = 1.5 */;
+    display: flex;
+    gap: 1rem;
+    }
+}

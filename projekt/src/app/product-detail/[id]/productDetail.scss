@@ -1,0 +1,32 @@
+@use "../../../variables.scss";
+.productDetail{
+    display: flex;
+    gap: 1.9375rem /* 31 / 16 = 1.9375 */;
+
+
+    &__img{
+        width: 30%;
+        min-width: 25.9375rem /* 415 / 16 = 25.9375 */;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+    &__textDiv{
+        font-family: variables.$inter;
+    }
+    &__heading{
+        font-size: variables.$largeHeading;
+        padding-bottom: 0.75rem /* 12 / 16 = 0.75 */;
+    }
+    &__text{
+        font-size: variables.$mediumText18;
+        font-weight: variables.$lightWeight400;
+        margin-bottom: 1rem;
+    }
+    &__date{
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+    &__button{
+        margin-top: 3.375rem /* 54 / 16 = 3.375 */;
+    }
+}

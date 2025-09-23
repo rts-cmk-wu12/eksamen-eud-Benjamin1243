@@ -1,0 +1,22 @@
+@use "../../variables.scss";
+.loginForm{
+   
+    width: 22%;
+    min-width: 20.625rem /* 330 / 16 = 20.625 */;
+    margin: 0 auto;
+    border: 1px solid variables.$inputBorderGrey;
+    padding: 1.5rem /* 24 / 16 = 1.5 */ ;
+    border-radius: 0.5rem;
+    display: grid;
+    gap: 1.5rem /* 24 / 16 = 1.5 */;
+     margin-bottom: 9.1875rem /* 147 / 16 = 9.1875 */;
+
+    &__submit{
+        background-color: variables.$buttonBackgroundBlack;
+        height: 2.5rem /* 40 / 16 = 2.5 */;
+        font-family: variables.$inter;
+        border: 0px solid transparent;
+        border-radius: 0.5rem;
+        color: variables.$whiteText;
+    }
+}

@@ -1,0 +1,16 @@
+@use "../../variables.scss";
+.mainIcon{
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem /* 5 / 16 = 0.3125 */;
+
+    &__img{
+        width: 2.5rem /* 40 / 16 = 2.5 */;
+        height: 2.5rem /* 40 / 16 = 2.5 */;
+    }
+    &__text{
+     font-family: variables.$inter;
+     font-size: 1.1875rem /* 19 / 16 = 1.1875 */;
+     font-weight: 400;
+    }
+}

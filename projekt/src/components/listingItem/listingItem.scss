@@ -1,19 +1,32 @@
 @use "../../variables.scss";
 .listingItem{
     border: 1px solid variables.$inputBorderGrey;
+   padding: 1rem;
+   text-decoration: none;
+  
+    border-radius: 0.5rem;
+   
+   
+   
+   
+  
+  &__article{
     padding: 1rem;
+  
     border-radius: 0.5rem;
     max-height: 19.8125rem /* 317 / 16 = 19.8125 */;
     max-width: 93%;
-   
-   
-  
-  
+  }
     &__img{
      
-        height: 80%;
+    height: 18vw;
+    max-height: 15.4375rem /* 247 / 16 = 15.4375 */;
         object-fit: cover;
         
+    }
+    &__link{
+       width: 100%;
+       padding: 1rem;
     }
     &__heading{
         margin-top: 1rem;

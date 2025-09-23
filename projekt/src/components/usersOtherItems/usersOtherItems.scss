@@ -1,0 +1,47 @@
+@use "../../variables.scss";
+.otherItems{
+    margin-top: 4.625rem /* 74 / 16 = 4.625 */;
+    &__heading{
+        margin-bottom: 1.1875rem /* 19 / 16 = 1.1875 */;
+        font-family: variables.$inter
+    }
+
+    &__flexDiv{
+        gap: 1.5rem /* 24 / 16 = 1.5 */;
+        display: flex;
+     &--overlay{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        & article{
+            grid-row: 1/-1;
+        
+       filter: blur(4);}
+       width: 100%;
+       z-index: 10;
+        
+        height: 100%;
+    }
+
+
+    }
+    
+    &__link{
+        position: absolute;
+        border: 1px solid variables.$inputBorderGrey;
+        background-color: rgba(0, 0, 0, 0.935);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-family: variables.$inter;
+        text-decoration: none;
+        font-size: variables.$mediumText18;
+       align-self: center;
+       justify-self: center;
+       color: variables.$whiteText;
+       text-align: center;
+      
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+        z-index: 10;
+
+    }
+}
