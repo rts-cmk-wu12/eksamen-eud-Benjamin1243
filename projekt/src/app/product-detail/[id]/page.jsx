@@ -27,7 +27,8 @@ export default async function ProductDetail({params}){
        
        
    </article>
-     <UserOtherItems user={data.user} logedIn={cookieStore.has("sw_token")}></UserOtherItems>
+   <UserOtherItems  currentId={data.id} user={data.user} logedIn={true}></UserOtherItems>
+     
      
      </>)
 }

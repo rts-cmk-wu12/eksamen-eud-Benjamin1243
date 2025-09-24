@@ -19,4 +19,8 @@
         border-radius: 0.5rem;
         color: variables.$whiteText;
     }
+    &__success{
+        font-family: variables.$inter;
+        text-align: center;
+    }
 }

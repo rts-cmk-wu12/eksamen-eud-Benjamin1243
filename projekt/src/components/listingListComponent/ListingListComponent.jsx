@@ -1,16 +1,16 @@
 "use client"
 import useFetch from "@/hooks/useFetch"
 import { useState } from "react"
-import "./listingComponent.scss"
+import "./listingListComponent.scss"
 import ListingItem from "../listingItem/ListingItem"
 import ProductPageScroller from "../productPageScroller/ProductPageScroller"
 
 
 export default function ListingComponent({items}){
-    console.log("items", items)
+   
 
 const [actualProducts, setActualProducts] = useState(null) 
-console.log("actual",actualProducts)
+
    
     
     return(

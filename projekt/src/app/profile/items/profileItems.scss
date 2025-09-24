@@ -1,0 +1,9 @@
+.profileItems{
+    &__heading{
+        margin-bottom: 1rem;
+    }
+    &__items{
+        display: flex;
+        gap: 1rem;
+    }
+}

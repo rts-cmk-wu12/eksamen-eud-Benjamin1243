@@ -1,5 +1,6 @@
 "use server";
 import fetcher from "@/utils/fetcher";
+import { cookies } from "next/headers";
 import z from "zod"
 export default async function loginAction(prevstate,formData){
     console.log("jejrj")
@@ -62,6 +63,11 @@ if(user.responseCode == 401){
     }
 }
  console.log("user :",user)
+
+const cookieStore = await cookies()
+cookieStore.set("sh_token", user.token, {maxAge: 3600})
+cookieStore.set("user_id", user.userId, {maxAge: 3600})
+
 return{
      success:true,
         errors:{},

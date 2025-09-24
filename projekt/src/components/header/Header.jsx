@@ -2,7 +2,12 @@
 import Link from "next/link";
 import "./header.scss"
 import { usePathname } from "next/navigation";
-export default function Header(){
+import logout from "@/actions/logout";
+import { useRouter } from "next/navigation";
+export default function Header({userId}){
+  const router = useRouter()
+  
+  
     const pathname = usePathname()
     console.log(pathname)
     return(
@@ -14,9 +19,11 @@ export default function Header(){
         </li>
         <li className="header__listItem"><Link href={"/"} className={ pathname == "/" ?  "header__link--active header__link": "header__link"  }>Listings</Link></li>
         <li className="header__listItem"><Link href={"/"} className="header__link">Community</Link></li>
-        <li className="header__listItem"><Link href={"/"} className="header__link">Contact</Link></li>
-        <li className="header__listItem header__listItem--buttonLook"><Link href={"/login"} className="header__link">Sign in</Link></li>
-        <li className="header__listItem header__listItem--buttonLookBlack"><Link href={"/"} className="header__link">Register</Link></li>
+        <li className="header__listItem"><Link href={"/contact"} className={ pathname == "/contact" ?  "header__link--active header__link": "header__link"  }>Contact</Link></li>
+        <li className={ pathname == "/login" || pathname == "/profile" ?  "header__listItem header__listItem--buttonLook header__listItem--buttonLook--active": "header__listItem header__listItem--buttonLook"  } >{ !userId? <Link href={"/login"} className="header__link">Sign in</Link>:<Link href={"/profile"} className="header__link">Profile</Link> }</li>
+        <li className="header__listItem header__listItem--buttonLookBlack">{!userId ?<Link href={"/register"} className="header__link">Register</Link>: <button className="header__button" onClick={()=>{if(logout()){
+          router.refresh("/")
+        }}}>sign out</button>}</li>
 
 
 

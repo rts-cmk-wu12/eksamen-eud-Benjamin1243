@@ -21,6 +21,12 @@
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
             border: 1px solid variables.$darkgreyBorder;
+            &--active{
+                background-color: transparent;
+              
+               
+
+            }
         }
         &--buttonLookBlack{
           
@@ -37,14 +43,24 @@
        
         font-weight: variables.$lightWeight;
         text-decoration: none;
+         padding: 0.5rem;
         
         &--active{
-            padding: 0.5rem;
+           
             border-radius: 0.5rem /* 8 / 16 = 0.5 */;
             background-color: variables.$whiteText;
         }
         
 
        
+    }
+    &__button{
+       background-color: transparent;
+       border: 1px solid transparent;
+       color: variables.$whiteText;
+        font-family: variables.$inter;
+       
+        font-weight: variables.$lightWeight;
+        text-decoration: none;
     }
 }
