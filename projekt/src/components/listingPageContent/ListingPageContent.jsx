@@ -21,17 +21,17 @@ const [filteredItems, setFilteredItems] = useState(items)
      //søgefunktion
        let sortedData = items?.filter((activity)=>{
         console.log(activity.title)
-        const titles = activity.title.split(" ")
+        const titles = activity?.title?.split(" ")
         console.log("titles ", titles)
-        const test =titles.filter((title)=>{
+        const splittetTitles =titles?.filter((title)=>{
           if(title.substring(0,serachConent.length).toLowerCase() ==serachConent.toLowerCase()){
             return title
           }
         })
-        if(test.length > 0){
+        if(splittetTitles?.length > 0){
           return activity
         }
-        console.log("test er :", test)
+        
         
        
         

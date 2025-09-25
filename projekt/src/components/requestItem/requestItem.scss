@@ -1,17 +1,9 @@
-@use "../../../variables.scss";
-.profileItems{
-    &__heading{
-        margin-bottom: 1rem;
-    }
-    &__items{
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(4,1fr);
-       
-    }
-    &__swap{
+@use "../../variables.scss";
+.requestItem{
+    justify-self: center; align-self: center;
         display: flex;
         gap: 1rem;
+        
         background-color: transparent;
         flex-direction:column;
         padding: 1rem;
@@ -33,7 +25,7 @@
              
             }
         }
-    }
+    
     &__swapDelete{
         width:2rem;
         height: 2rem;
@@ -48,10 +40,28 @@
         &:hover{
             transform: scale(1.2);
         }
+        
     }
-    &__swapHeading{
+     &__swapAcept{
+        width:2rem;
+        height: 2rem;
+        background-color: rgb(15, 255, 2);
+        border-radius: 100%;
+        margin-top: -2rem;
+        align-self: end;
+        margin-right: -1.5rem;
+        border: 1px solid transparent;
+        color: white;
+        transition: 0.4s;
+        &:hover{
+            transform: scale(1.2);
+        }
+   }
+
+
+ &__text{
      font-family: variables.$inter;
      text-align: center;
+     font-weight: 600;
 
-    }
-}
+    }}

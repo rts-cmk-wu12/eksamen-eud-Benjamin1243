@@ -11,3 +11,7 @@ export default function Home() {
         <ListingPageContent></ListingPageContent>
      )
 }
+
+export const metadata = {
+  title: 'Listings',
+}

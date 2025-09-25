@@ -1,11 +1,11 @@
-import FormComponent from "@/components/formComponent/FormComponent";
+import RegisterNewItem from "@/components/registerNewItem/RegisterNewItem";
 
-export default function RegisterNewItem(){
-const inputs = [{name :"title", label: "Title"}, {name: "description", label: "description", type:"text"}]
+
+export default function RegisterNewItemPage(){
+   
     return(
         <>
-        <h1>Register new Item</h1>
-        <FormComponent inputs={inputs}></FormComponent>
+     <RegisterNewItem></RegisterNewItem>
         </>
 
     )

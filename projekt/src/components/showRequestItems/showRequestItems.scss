@@ -1,17 +1,21 @@
-@use "../../../variables.scss";
-.profileItems{
-    &__heading{
-        margin-bottom: 1rem;
-    }
+@use "../../variables.scss";
+.showRequestItems{
+    
     &__items{
         display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(4,1fr);
-       
+       grid-template-columns: repeat(3,1fr);
+       gap: 2rem;
     }
-    &__swap{
+    &__heading{
+        font-family: variables.$inter;
+        text-align: center;
+        margin: 1rem 0;
+    }
+&__swap{
+    justify-self: center; align-self: center;
         display: flex;
         gap: 1rem;
+        
         background-color: transparent;
         flex-direction:column;
         padding: 1rem;
@@ -48,10 +52,24 @@
         &:hover{
             transform: scale(1.2);
         }
+        
     }
+     &__swapAcept{
+        width:2rem;
+        height: 2rem;
+        background-color: rgb(15, 255, 2);
+        border-radius: 100%;
+        margin-top: -2rem;
+        align-self: end;
+        margin-right: -1.5rem;
+        border: 1px solid transparent;
+        color: white;
+        transition: 0.4s;
+        &:hover{
+            transform: scale(1.2);
+        }
     &__swapHeading{
      font-family: variables.$inter;
      text-align: center;
 
-    }
-}
+    }}}

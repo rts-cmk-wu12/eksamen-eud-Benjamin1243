@@ -1,0 +1,12 @@
+@use "../../variables.scss";
+.updateItem{
+
+    &__heading{
+        font-family: variables.$inter;
+        text-align: center;
+
+    }
+    &__image{
+        max-width: 20px;
+    }
+}
