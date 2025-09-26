@@ -62,3 +62,18 @@
 
     }
 }
+.proposeSwapButton{
+    margin-top: 1rem;
+    font-family: variables.$inter;
+    padding: 0.5rem 1rem;
+    font-size: 1rem /* 18 / 16 = 1.125 */;
+    background-color: transparent;
+    border: 2px solid variables.$inputBorderGrey;
+    border-radius: 0.5rem;
+    transition: 0.2s;
+    &:hover{
+        background-color: variables.$inputBorderGrey;
+        
+    }
+    
+}

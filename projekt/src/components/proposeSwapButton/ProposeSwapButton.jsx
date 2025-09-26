@@ -71,7 +71,7 @@ export default function ProposeSwapButton({userId, token, produtId}){
     return (
     <>
     {alreadySwapped ?<Link href="/profile/items">You Already asked for a swap on this listing: click here to see your swaps </Link>:
-    <button onClick={()=>{
+    <button className="proposeSwapButton" onClick={()=>{
       setClickAction(true)
     }}>Propose swap</button>}
 

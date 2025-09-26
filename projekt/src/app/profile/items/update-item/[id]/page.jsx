@@ -1,8 +1,22 @@
-"use server"
+
 import FormComponent from "@/components/formComponent/FormComponent"
 import UpdateItemForm from "@/components/updateItemForm/UpdateItemForm"
 import fetcher from "@/utils/fetcher"
 import { cookies } from "next/headers"
+
+
+export async function generateMetadata({params}) {
+  // read route params
+  const {id} = await params
+  
+   const item = await  fetcher("http://localhost:4000/api/v1/listings/" + id)
+ 
+  return {
+    title: "update: " +item.title,
+    
+  }
+}
+ 
 
 export default async function UpdateItem({params}){
     const {id} = await params
@@ -19,8 +33,11 @@ export default async function UpdateItem({params}){
     )
    }
 
-   return(
+   return(<>
+   
 <UpdateItemForm data={item}></UpdateItemForm>
+
+</>
    
    )
 

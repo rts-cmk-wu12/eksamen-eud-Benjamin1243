@@ -47,7 +47,7 @@ export default function RequestItem({request, userId, toUser, listings}) {
     if (!toUser) {
         return (<div className="requestItem"> <button onClick={() => {deleteRequestAction(request.id) }} className="requestItem__swapDelete">X</button><p className="requestItem__text">Du vil have </p><ListingItem item={requestItem}></ListingItem> <p className="requestItem__text">for </p><ListingItem item={offerItem}></ListingItem></div>)
     }else{
-                return (<div className="requestItem"> <button onClick={() => {doTheSwapAction(offerItem, requestItem, request.id) }} className="requestItems__swapAcept">✔️</button><p className="requestItem__text">Du skal give </p><ListingItem item={requestItem}></ListingItem> <p className="requestItem__text">for </p><ListingItem item={offerItem}></ListingItem></div>)
+                return (<div className="requestItem"> <button onClick={() => {deleteRequestAction(request.id) }} className="requestItem__swapDelete">X</button> <button onClick={() => {doTheSwapAction(offerItem, requestItem, request.id) }} className="requestItems__swapAcept">Acept</button><p className="requestItem__text">Du skal give </p><ListingItem item={requestItem}></ListingItem> <p className="requestItem__text">for </p><ListingItem item={offerItem}></ListingItem></div>)
 
     }
 

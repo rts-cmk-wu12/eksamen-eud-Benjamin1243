@@ -11,7 +11,6 @@ export const metadata = {
     template: '%s | SwapHub',
     default: 'SwapHub', // a default is required when creating a template
   },
-  description: 'Vores egen dejlige hjemmelavet dba',
 }
  
 
@@ -19,7 +18,7 @@ export default async function RootLayout({ children }) {
   const cookieStore = await cookies()
 
   
- 
+ console.log(children)
 
   return (
     <html lang="en">

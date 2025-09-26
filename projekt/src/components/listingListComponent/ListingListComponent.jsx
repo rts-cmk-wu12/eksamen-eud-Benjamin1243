@@ -6,10 +6,11 @@ import ListingItem from "../listingItem/ListingItem"
 import ProductPageScroller from "../productPageScroller/ProductPageScroller"
 
 
-export default function ListingComponent({items}){
-   
+export default function ListingListComponent({items}){
 
+    
 const [actualProducts, setActualProducts] = useState(null) 
+
 
    
     

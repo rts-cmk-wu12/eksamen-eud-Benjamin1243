@@ -1,10 +1,16 @@
-"use server"
+
 
 import ListingItem from "@/components/listingItem/ListingItem"
 import fetcher from "@/utils/fetcher"
 import { cookies, headers } from "next/headers"
 import "./profileItems.scss"
 import ShowRequestItems from "@/components/showRequestItems/ShowRequestItems"
+import Link from "next/link"
+
+
+export const metadata = {
+  title: 'Dine listings',
+}
 export default async function  ProfileItems(){
     const cookieStore = await cookies()
     const userId = cookieStore.get("user_id").value 
@@ -48,7 +54,7 @@ const listingIds = user?.listings?.map((listing)=>{
         <h1 className="profileItems__heading">Your listings</h1>
         <section className="profileItems__items">
             {listingsData?.map((listing,index)=>{
-                return <ListingItem key={index}  specielLink={"/profile/items/update-item/" + listing.id} item={listing}></ListingItem>
+                return <ListingItem key={index} noLink={true}   item={listing}><Link className="editLink" href={"/product-detail/" + listing.id}>see the post</Link><Link className="editLink" href={"/profile/items/update-item/" + listing.id}>Edit this or delete this</Link></ListingItem>
             })}
             <ListingItem specielLink={"/profile/items/register-new-item"}  placeholder  ></ListingItem>
         </section>

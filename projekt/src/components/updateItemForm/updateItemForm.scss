@@ -7,6 +7,23 @@
 
     }
     &__image{
-        max-width: 20px;
+        max-width: 200px;
+
+        margin: 0 auto;
+        margin-top: -5rem;
+        display: block;
+    }
+    &__deleteButton{
+        margin: 1rem auto;
+        display: block;
+        font-family: variables.$inter;
+        background-color: rgb(173, 0, 0);
+        border: 0px solid red;
+        padding: 1rem 0.5rem;
+        color: white;
+        font-size: 0.8rem;
+        border-radius: 0.5rem;
+
+
     }
 }

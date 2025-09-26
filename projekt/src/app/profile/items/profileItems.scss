@@ -2,6 +2,7 @@
 .profileItems{
     &__heading{
         margin-bottom: 1rem;
+        font-family: variables.$inter;
     }
     &__items{
         display: grid;

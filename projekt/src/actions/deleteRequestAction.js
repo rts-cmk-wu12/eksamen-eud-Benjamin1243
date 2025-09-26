@@ -23,7 +23,7 @@ export default async function deleteRequestAction(id){
 
     }
    }
- revalidatePath('/profile/items/')
+ revalidatePath('/profile/items')
    return{
         success: true,
         message: "alt gik godt"

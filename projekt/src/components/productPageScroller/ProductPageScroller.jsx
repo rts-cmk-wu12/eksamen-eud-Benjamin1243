@@ -44,6 +44,7 @@ export default function ProductPageScroller({ max, setState, values }) {
             }
 
         }
+        
         setState(values?.filter((value,index) => index +1  > (count - 1) * max && index +1 <= (count) * max))
         setCounter(count)
 
@@ -54,16 +55,17 @@ export default function ProductPageScroller({ max, setState, values }) {
 
 
     //sæt første 6 values ind i state
+    //Grunden til denne fejler er min hypotese om at useEffecten ikke kører når man bare rent sortere data, fordi det stadig fylder det samme
     useEffect(() => {
         
-        console.log()
+      
         setState(values?.filter((value, index) => index +1 <= max))
         setCounter(1)
+        pageScrollHander()
 
 
 
-    }, [values])
-
+    }, [values ])
 
 
     return (

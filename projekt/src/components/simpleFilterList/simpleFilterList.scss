@@ -5,11 +5,17 @@
    
     &__listItem{
         list-style: none;
+       
+
     }
     &__button{
         padding: 0.5rem;
         border: 0px solid transparent;
         border-radius: 0.5rem;
         color: variables.$darkGreyText;
+         &--active{
+            background-color: black;
+            color: white;
+        }
     }
 }

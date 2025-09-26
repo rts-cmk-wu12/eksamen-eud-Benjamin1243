@@ -8,10 +8,12 @@ import ListingPageContent from "@/components/listingPageContent/ListingPageConte
 
 export default function Home() {
   return (
+    <>
+    <h1 style={{display:"none"}}>SwapHub</h1>
         <ListingPageContent></ListingPageContent>
+        </>
      )
 }
 
-export const metadata = {
-  title: 'Listings',
-}
+
+ 
